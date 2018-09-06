@@ -1,0 +1,7 @@
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.exe.config
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.exe
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.pdb
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.csprojAssemblyReference.cache
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.csproj.CoreCompileInputs.cache
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.exe
+E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.pdb
