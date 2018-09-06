@@ -12,6 +12,7 @@ namespace LexAnalyzeCS
         public static String Assignment = "=";
 
         //= {previous state, cur after number, cur after identifier, cur after operator, cur after assignment, cur after start, cur after error}
+        //TODO: Make these List<Of String> and change code.  This is needed for string import
         public static String[] StartList = { "IDENTIFIER", "NUMBER", "OPERATOR", "ASSIGNMENT", "START", "ERROR" };
 
         public static String[] IdentyList = { "IDENTIFIER", "IDENTIFIER", "OPERATOR", "ASSIGNMENT", "START", "ERROR" };
@@ -33,7 +34,13 @@ namespace LexAnalyzeCS
 
                 foreach (var line in lines)
                 {
-                    var split = line.Split(',');
+                    string[] split = line.Split(',');
+                    switch (split[0].ToString())
+                    {
+                        case ("Start"):
+                            
+                            break;
+                    }
 
 
                 }
