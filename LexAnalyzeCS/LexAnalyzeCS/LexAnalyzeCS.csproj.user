@@ -2,6 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartArguments>examples.txt</StartArguments>
-    <StartWorkingDirectory>E:\Drive\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\</StartWorkingDirectory>
+    <StartWorkingDirectory>C:\Users\brent\Desktop\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\</StartWorkingDirectory>
   </PropertyGroup>
 </Project>

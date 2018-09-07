@@ -1,4 +1,9 @@
+Add this under list creations:
+        public static List<string> lhsRule; // = { "statement", "assign_stmt", "expression" };
+        public static List<string> rhsRule; // = { "NUMBER", "IDENTIFIER", "OPERATOR", "ASSIGNMENT" };
+
 Add this back in at line 44:
+
 
 if (token.Contains("ERROR"))
                     {

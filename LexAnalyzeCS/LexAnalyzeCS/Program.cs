@@ -6,49 +6,66 @@ namespace LexAnalyzeCS
 {
     internal class Program
     {
-        public static String Numbers = "0123456789";
-        public static String Alpha = "abcdefghijklmnopqrstuvwxyz";
-        public static String Operators = "+-*/";
-        public static String Assignment = "=";
+        public static string Numbers = "0123456789";
+        public static string Alpha = "abcdefghijklmnopqrstuvwxyz";
+        public static string Operators = "+-*/";
+        public static string Assignment = "=";
 
-        //= {previous state, cur after number, cur after identifier, cur after operator, cur after assignment, cur after start, cur after error}
-        //TODO: Make these List<Of String> and change code.  This is needed for string import
-        public static String[] StartList = { "IDENTIFIER", "NUMBER", "OPERATOR", "ASSIGNMENT", "START", "ERROR" };
-
-        public static String[] IdentyList = { "IDENTIFIER", "IDENTIFIER", "OPERATOR", "ASSIGNMENT", "START", "ERROR" };
-        public static String[] NumberList = { "ERROR", "NUMBER", "OPERATOR", "ASSIGNMENT", "START", "ERROR" };
-        public static String[] OperateList = { "IDENTIFIER", "NUMBER", "ERROR", "ASSIGNMENT", "START", "ERROR" };
-        public static String[] AssignmentList = { "IDENTIFIER", "NUMBER", "OPERATOR", "ERROR", "START", "ERROR" };
-        public static String[] ErrorsList = { "ERROR", "ERROR", "ERROR", "ERROR", "ERROR", "ERROR" };
-
-        public static String[] lhsRule = { "statement", "assign_stmt", "expression" };
-        public static String[] rhsRule = { "NUMBER", "IDENTIFIER", "OPERATOR", "ASSIGNMENT" };
+        public static List<string> StartList = new List<string>();
+        public static List<string> IdentyList = new List<string>();
+        public static List<string> NumberList = new List<string>();
+        public static List<string> OperateList = new List<string>();
+        public static List<string> AssignmentList = new List<string>();
+        public static List<string> ErrorsList = new List<string>();
 
         private static void Main(string[] args)
         {
-
             try
             {
-                var path = Directory.GetCurrentDirectory()+@"\states.txt";
+                var path = Directory.GetCurrentDirectory() + @"\states.txt";
                 var lines = File.ReadAllLines(path);
 
                 foreach (var line in lines)
                 {
                     string[] split = line.Split(',');
-                    switch (split[0].ToString())
+                    switch (split[0])
                     {
                         case ("Start"):
-                            
+                            StartList.AddRange(split);
+                            StartList.RemoveAt(0);
+                            break;
+
+                        case ("Ident"):
+                            IdentyList.AddRange(split);
+                            IdentyList.RemoveAt(0);
+                            break;
+
+                        case ("Number"):
+                            NumberList.AddRange(split);
+                            NumberList.RemoveAt(0);
+                            break;
+
+                        case ("Operate"):
+                            OperateList.AddRange(split);
+                            OperateList.RemoveAt(0);
+                            break;
+
+                        case ("Assign"):
+                            AssignmentList.AddRange(split);
+                            AssignmentList.RemoveAt(0);
+                            break;
+
+                        case ("Error"):
+                            ErrorsList.AddRange(split);
+                            ErrorsList.RemoveAt(0);
                             break;
                     }
-
-
                 }
             }
             catch (Exception ex)
             {
-                    Console.WriteLine(ex);
-                    throw;
+                Console.WriteLine(ex);
+                throw;
             }
 
             try
@@ -78,15 +95,15 @@ namespace LexAnalyzeCS
             Console.ReadKey();
         }
 
-        private static List<String> Tokenize(String token)
+        private static List<string> Tokenize(string token)
         {
-            String currentState;
-            String[] currentList = StartList;
+            var currentList = StartList;
 
-            List<String> tokenList = new List<string>();
+            var tokenList = new List<string>();
 
-            foreach (char character in token.ToCharArray())
+            foreach (var character in token.ToCharArray())
             {
+                string currentState;
                 if (Alpha.IndexOf(character) != -1)
                 {
                     currentState = currentList[0];
