@@ -12,3 +12,10 @@ C:\Users\brent\Desktop\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.c
 C:\Users\brent\Desktop\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.csproj.CoreCompileInputs.cache
 C:\Users\brent\Desktop\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.exe
 C:\Users\brent\Desktop\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.pdb
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.exe.config
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.exe
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\bin\Debug\LexAnalyzeCS.pdb
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.csprojAssemblyReference.cache
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.csproj.CoreCompileInputs.cache
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.exe
+D:\CSC434\LexAnalyzeCS\LexAnalyzeCS\obj\Debug\LexAnalyzeCS.pdb

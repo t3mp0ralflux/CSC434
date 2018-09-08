@@ -1,0 +1,60 @@
+a tokenizes as: IDENTIFIER 
+
+Valid Statement
+
+
+a = b tokenizes as: IDENTIFIER ASSIGNMENT IDENTIFIER 
+
+Valid Statement
+
+
+num3 = num1/2 + num2 tokenizes as: IDENTIFIER ASSIGNMENT IDENTIFIER OPERATOR NUMBER OPERATOR IDENTIFIER 
+
+Valid Statement
+
+
+a = a + 1 tokenizes as: IDENTIFIER ASSIGNMENT IDENTIFIER OPERATOR NUMBER 
+
+Valid Statement
+
+
+a + 2 * 3 - c + d*e tokenizes as: IDENTIFIER OPERATOR NUMBER OPERATOR NUMBER OPERATOR IDENTIFIER OPERATOR IDENTIFIER OPERATOR IDENTIFIER 
+
+Valid Statement
+
+
+a              = a             + 2*a tokenizes as: IDENTIFIER ASSIGNMENT IDENTIFIER OPERATOR NUMBER OPERATOR IDENTIFIER 
+
+Valid Statement
+
+
+a$1 + num1 tokenizes as: IDENTIFIER ERROR 
+
+Error.  Cannot be sent to recognizer.
+
+
+$a1 = 20 tokenizes as: ERROR 
+
+Error.  Cannot be sent to recognizer.
+
+
++ a + 10 tokenizes as: OPERATOR IDENTIFIER OPERATOR NUMBER 
+
+Invalid Statement
+
+
+a = -1 tokenizes as: IDENTIFIER ASSIGNMENT OPERATOR NUMBER 
+
+Invalid Statement
+
+
+a+=10 tokenizes as: IDENTIFIER OPERATOR ASSIGNMENT NUMBER 
+
+Invalid Statement
+
+
+x=a++ tokenizes as: IDENTIFIER ASSIGNMENT IDENTIFIER OPERATOR ERROR 
+
+Error.  Cannot be sent to recognizer.
+
+
