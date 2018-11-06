@@ -1,6 +1,6 @@
 (* Brent Belanger *)
 (* CSC434-1 *)
-(* 10/13/2018 *)
+(* 10/20/2018 *)
 
 (* #1 - pow *)
 (* Input: a = integer, b = integer*)
